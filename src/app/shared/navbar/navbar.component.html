@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Club Nautico</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown" routerLinkActive="nav-item active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Salidas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/salidas/list']" routerLinkActive="nav-item active"  >Lista</a>
+            <a class="dropdown-item" [routerLink]="['/salidas/add']" routerLinkActive="nav-item active" >Añadir salida</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown" routerLinkActive="nav-item active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Barcos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/barcos/list']" routerLinkActive="nav-item active"  >Lista</a>
+            <a class="dropdown-item" [routerLink]="['/barcos/add']" routerLinkActive="nav-item active" >Añadir barco</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown" routerLinkActive="nav-item active">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Patrones
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/patrones/list']" routerLinkActive="nav-item active"  >Lista</a>
+            <a class="dropdown-item" [routerLink]="['/patrones/add']" routerLinkActive="nav-item active" >Añadir patrón</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown" routerLinkActive="nav-item active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Socios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/socios/list']" routerLinkActive="nav-item active"  >Lista</a>
+            <a class="dropdown-item" [routerLink]="['/socios/add']" routerLinkActive="nav-item active" >Añadir socio</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>

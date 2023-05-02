@@ -1,0 +1,26 @@
+<div class="card">
+    <p-table [value]="barcosList" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="numMatricula" style="width:20%">Num. Matricula<p-sortIcon field="numMatricula"></p-sortIcon></th>
+                <th pSortableColumn="nombre" style="width:20%">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
+                <th pSortableColumn="numAmarre" style="width:20%">Num. Amarre <p-sortIcon field="numAmarre"></p-sortIcon></th>
+                <th pSortableColumn="cuota" style="width:20%">Cuota <p-sortIcon field="cuota"></p-sortIcon></th>
+                <th pSortableColumn="idSocio" style="width:20%">Id Socio <p-sortIcon field="idSocio"></p-sortIcon></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-barco>
+            <tr>
+                <td>{{ barco.numMatricula }}</td>
+                <td>{{ barco.nombre }}</td>
+                <td>{{ barco.numAmarre }}</td>
+                <td>{{ barco.cuota }}</td>
+                <td>{{ barco.idSocio }}</td>
+                <td><button (click)="deleteBarco(barco.numMatricula)" type="button" class="btn btn-danger">Borrar</button></td>
+                <td><button [routerLink]="['/barcos/update', barco.numMatricula]" type="button" class="btn btn-warning">Editar</button></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

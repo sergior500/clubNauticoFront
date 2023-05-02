@@ -1,0 +1,19 @@
+<div class="card">
+    <p-table [value]="salidaList" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="numMatricula" style="width:20%">Barco <p-sortIcon field="numMatricula"></p-sortIcon></th>
+                <th pSortableColumn="idPatron" style="width:20%">Patron <p-sortIcon field="idPatron"></p-sortIcon></th>
+                <th pSortableColumn="fecha" style="width:20%">Fecha <p-sortIcon field="fecha"></p-sortIcon></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-salida>
+            <tr>
+                <td>{{ salida.numMatricula.nombre }}</td>
+                <td>{{ salida.idPatron.nombre }}</td>
+                <td>{{ salida.fecha[0]}}/{{salida.fecha[1]}}/{{salida.fecha[2]}}</td>
+
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

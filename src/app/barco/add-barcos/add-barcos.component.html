@@ -1,0 +1,53 @@
+<section class=" bg-image">
+
+        <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">Añadir barcos</h2>
+                
+                <form class="form-horizontal" [formGroup]="myForm" autocomplete="off" (ngSubmit)="save()">
+
+                    <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example1cg">Nombre</label>
+                        <input type="text" id="form3Example1cg"
+                            class="form-control form-control-lg" formControlName="nombre"/>
+                            <span class="form-text text-danger" *ngIf="notValidField('nombre')">
+                                Nombre invalido
+                            </span>
+                    </div>
+                    <label class="form-label" for="form3Example3cg">Cuota</label>
+                    <div class="form-outline mb-4">
+                        <input type="number" id="form3Example3cg"
+                            class="form-control form-control-lg" formControlName="cuota"/>
+                            <span class="form-text text-danger" *ngIf="notValidField('cuota')">
+                                Cuota invalida
+                            </span>
+                    </div>
+                <label class="form-label" for="form3Example3cg">Num. Amarre</label>
+                    <div class="form-outline mb-4">
+                        <input type="number" id="form3Example3cg"
+                            class="form-control form-control-lg" formControlName="numAmarre"/>
+                            <span class="form-text text-danger" *ngIf="notValidField('numAmarre')">
+                                Amarre invalido
+                            </span>
+                    </div>
+                    
+                    <div class="form-outline mb-4">
+                        <label
+                        class="form-label" for="form3Example4cg"> Patron</label>
+                        <select formControlName="idSocio" id="idSocio" class="form-control form-control-lg">
+                            <option value="" selected>Elige una opción</option>
+                            <option [value]="socio.id" *ngFor="let socio of socios">{{socio.nombre}}</option>
+
+                        </select>
+                    </div>
+                    
+                    <div class="d-flex justify-content-center">
+                        <button type="submit"
+                            class="btn btn-dark btn-block btn-lg gradient-custom-4">Add</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+	</section>

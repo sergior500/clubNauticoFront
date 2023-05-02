@@ -1,0 +1,23 @@
+<div class="card">
+    <p-table [value]="sociosList" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="id" style="width:20%">Id <p-sortIcon field="id"></p-sortIcon></th>
+                <th pSortableColumn="nombre" style="width:20%">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
+                <th pSortableColumn="apellido" style="width:20%">Apellido <p-sortIcon field="apellido"></p-sortIcon></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-socio>
+            <tr>
+                <td>{{ socio.id }}</td>
+                <td>{{ socio.nombre }}</td>
+                <td>{{ socio.apellido }}</td>
+                <td><button (click)="deleteSocio(socio.id)" type="button" class="btn btn-danger">Borrar</button></td>
+                <td><button [routerLink]="['/socios/update', socio.id]" type="button" class="btn btn-warning">Editar</button></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
